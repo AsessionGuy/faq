@@ -61,6 +61,7 @@ Esta es otra herramienta como *winget* que vamos a usar para instalar cosas.
 Para instalarlo (en una sesión de Powershell como administrador):
 
 ```powershell
+Set-ExecutionPolicy Bypass -Scope Process
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "https://chocolatey.org/install.ps1" -UseBasicParsing | Invoke-Expression
 refreshenv
